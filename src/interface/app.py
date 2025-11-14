@@ -1,24 +1,20 @@
-# =============================================
-# 📘 LIBRIS — Sistema de Login + Recomendação
-# =============================================
-
-# ==== Importações básicas ====
+# src/interface/app.py
 import streamlit as st
 import sys
 import os
 
-# ==== Configuração inicial da página ====
+# Adiciona o diretório raiz do projeto ao path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
+
+# Imports do projeto
+from src.api.google_books import buscar_livros
+from src.interface.login import tela_login, criar_conta
+from src.interface.mongo import pre_cadastro, is_db_available
+
+# Configura a página
 st.set_page_config(page_title="📘 Libris", layout="centered")
 
-# ==== Ajuste de caminho (para importar o módulo buscar_livros) ====
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
-from src.api.google_books import buscar_livros
-
-
-# =============================================
-# 🔧 Inicialização de variáveis no session_state
-# =============================================
-
+# Session state defaults
 if "logado" not in st.session_state:
     st.session_state.logado = False
 if "pagina" not in st.session_state:
@@ -28,36 +24,14 @@ if "usuario" not in st.session_state:
 if "livro_selecionado" not in st.session_state:
     st.session_state.livro_selecionado = None
 
+# Pré-cadastro
+if is_db_available():
+    pre_cadastro()
+else:
+    st.warning("⚠️ Banco offline. Usando fallback em memória.")
 
-# =============================================
-# 🔐 TELA DE LOGIN
-# =============================================
-def tela_login():
-    """Mostra a tela de login do sistema."""
-
-    st.title("🔐 Área de Login")
-
-    usuario = st.text_input("Usuário")
-    senha = st.text_input("Senha:", type="password")
-
-    if st.button("Entrar"):
-        if usuario == "admin" and senha == "123":
-            st.session_state.logado = True
-            st.session_state.usuario = usuario
-            st.session_state.pagina = "recomendador"
-            st.success("✅ Login feito com sucesso!")
-            st.rerun()
-        else:
-            st.error("❌ Usuário ou senha incorretos.")
-
-
-# =============================================
-# 📚 TELA DE RECOMENDAÇÃO DE LIVROS
-# =============================================
+# Recomendador de livros
 def tela_recomendador():
-    """Mostra a tela principal do recomendador de livros."""
-
-    # === Barra lateral (informações e logout) ===
     st.sidebar.title(f"👋 Olá, {st.session_state.usuario}")
     if st.sidebar.button("Sair"):
         st.session_state.logado = False
@@ -65,16 +39,12 @@ def tela_recomendador():
         st.session_state.livro_selecionado = None
         st.rerun()
 
-    # === Título da página ===
     st.title("📘 Libris – Recomendador de Livros")
 
-    # === Campo de busca ===
     if st.session_state.livro_selecionado is None:
         query = st.text_input("Digite um livro que você gosta:")
-
         if query:
             resultados = buscar_livros(query)
-
             for idx, item in enumerate(resultados.get("items", [])[:10]):
                 info = item.get("volumeInfo", {})
                 titulo = info.get("title", "Sem título")
@@ -84,39 +54,30 @@ def tela_recomendador():
 
                 with st.container():
                     cols = st.columns([1, 4])
-
                     with cols[0]:
                         if imagem and imagem.startswith("http"):
                             st.image(imagem, width=100)
                         else:
                             st.image("https://via.placeholder.com/120x180?text=Sem+Capa", width=100)
-
                     with cols[1]:
                         st.markdown(f"### {titulo}")
                         st.markdown(f"**Autor(es):** {autores}")
                         st.markdown(f"_{descricao}_")
-
                         if st.button(f"📖 Ver mais sobre '{titulo}'", key=f"btn_{idx}"):
                             st.session_state.livro_selecionado = item
                             st.rerun()
-
-    # === Exibição dos detalhes do livro selecionado ===
     else:
         livro = st.session_state.livro_selecionado
         info = livro["volumeInfo"]
-
         titulo = info.get("title", "Sem título")
         autores = ", ".join(info.get("authors", ["Desconhecido"]))
         imagem = info.get("imageLinks", {}).get("thumbnail", None)
 
-        # Exibe capa e título
         st.markdown(f"## {titulo}")
         if imagem and imagem.startswith("http"):
             st.image(imagem, width=150)
         else:
             st.image("https://via.placeholder.com/150x220?text=Sem+Capa", width=150)
-
-        # Informações do livro
         st.write(f"**Autor(es):** {autores}")
         st.write(f"**Ano de publicação:** {info.get('publishedDate', 'Desconhecido')}")
         st.write(f"**Gênero:** {', '.join(info.get('categories', ['Não informado']))}")
@@ -128,16 +89,18 @@ def tela_recomendador():
             st.session_state.livro_selecionado = None
             st.rerun()
 
-
-# =============================================
-# 🧭 CONTROLE DE NAVEGAÇÃO ENTRE AS TELAS
-# =============================================
-if st.session_state.pagina == "login":
-    tela_login()
-
-elif st.session_state.pagina == "recomendador" and st.session_state.logado:
+# -----------------------------
+# Fluxo principal
+# -----------------------------
+if st.session_state.logado:
+    # Usuário logado → mostra recomendador
     tela_recomendador()
-
 else:
-    st.session_state.pagina = "login"
-    st.rerun()
+    # Usuário não logado → mostra menu lateral de Login/Criar Conta
+    menu = ["Login", "Criar Conta"]
+    pagina_escolhida = st.sidebar.selectbox("Menu", menu)
+
+    if pagina_escolhida == "Login":
+        tela_login()
+    elif pagina_escolhida == "Criar Conta":
+        criar_conta()
