@@ -1,66 +1,69 @@
 import streamlit as st
 from src.interface.mongo import criar_usuario, autenticar_usuario
 
+# =============================
+# TELA DE LOGIN
+# =============================
 def tela_login():
-    """Tela de login do usuário"""
-    st.title("🔐 Área de Login")
+    st.title("🔐 Login")
 
-    usuario = st.text_input("Usuário")
-    senha = st.text_input("Senha", type="password")
+    usuario = st.text_input("Usuário:")
+    senha = st.text_input("Senha:", type="password")
 
     if st.button("Entrar"):
-        # Validação de campos
-        if not usuario or not senha:
-            st.warning("⚠️ Preencha todos os campos!")
-            return
-
-        # 🔑 Senha universal
-        if usuario == "admin" and senha == "123":
-            st.success("✅ Login realizado com conta universal (admin)")
-            st.session_state.logado = True
-            st.session_state.usuario = "admin"
-            st.session_state.pagina = "recomendador"
-            st.rerun()
-            return
-
-        # Autenticação normal
         if autenticar_usuario(usuario, senha):
-            st.success(f"✅ Login realizado! Bem-vindo, {usuario}")
+            st.success("Login realizado com sucesso!")
+
+            # inicializar sessão
             st.session_state.logado = True
             st.session_state.usuario = usuario
+
+            # resetar estado do app
             st.session_state.pagina = "recomendador"
+            st.session_state.livro_selecionado = None
+            st.session_state.favoritos = []
+            st.session_state.notas = {}
+            st.session_state.db_loaded = False
+
             st.rerun()
         else:
-            st.error("❌ Usuário ou senha incorretos!")
+            st.error("Usuário ou senha incorretos.")
 
+
+# =============================
+# TELA DE CRIAR CONTA
+# =============================
 def criar_conta():
-    """Tela de criação de conta"""
-    st.title("📝 Criar Conta")
+    st.title("📝 Criar nova conta")
 
-    usuario = st.text_input("Escolha um nome de usuário")
-    email = st.text_input("E-mail")
-    senha = st.text_input("Senha", type="password")
-    senha_conf = st.text_input("Confirme a senha", type="password")
+    usuario = st.text_input("Usuário:")
+    email = st.text_input("E-mail:")
+    senha = st.text_input("Senha:", type="password")
+    senha2 = st.text_input("Confirmar senha:", type="password")
 
-    if st.button("Criar Conta"):
-        # Validação de campos
-        if not usuario or not senha or not email:
-            st.warning("⚠️ Preencha todos os campos!")
-            return
-        if senha != senha_conf:
-            st.warning("⚠️ As senhas não coincidem!")
+    if st.button("Cadastrar"):
+
+        if senha != senha2:
+            st.error("As senhas não coincidem.")
             return
 
-        # Criação de usuário
-        sucesso, msg = criar_usuario(usuario, senha, email)
+        ok, msg = criar_usuario(usuario, senha, email)
 
-        if sucesso:
-            st.success(f"✅ Conta criada com sucesso! Você já pode logar, {usuario}")
+        if ok:
+            st.success("Conta criada com sucesso!")
+
+            # login automático após criação da conta
+            st.session_state.logado = True
+            st.session_state.usuario = usuario
+
+            # resetar estado do app
+            st.session_state.pagina = "recomendador"
+            st.session_state.livro_selecionado = None
+            st.session_state.favoritos = []
+            st.session_state.notas = {}
+            st.session_state.db_loaded = False
+
+            st.rerun()
+
         else:
-            # Mensagens específicas de erro
-            if "E-mail" in msg:
-                st.warning("⚠️ Este e-mail já está cadastrado. Tente outro.")
-            elif "Usuário" in msg:
-                st.warning("⚠️ Nome de usuário já existe. Escolha outro.")
-            else:
-                st.error(f"❌ Não foi possível criar a conta: {msg}")
+            st.error(msg)

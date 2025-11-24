@@ -1,0 +1,465 @@
+{
+    "usuarios": [
+        {
+            "usuario": "renan1227",
+            "senha": "123",
+            "email": "renasin122"
+        },
+        {
+            "usuario": "bassetin",
+            "senha": "1725",
+            "email": "lucasroding@gmail.com"
+        },
+        {
+            "usuario": "rayssa",
+            "senha": "1725",
+            "email": "rayssakelly07@gmail.com"
+        }
+    ],
+    "favoritos": {
+        "bassetin": [
+            {
+                "kind": "books#volume",
+                "id": "gDLpyWtFacYC",
+                "etag": "fqJVxe9LOSU",
+                "selfLink": "https://www.googleapis.com/books/v1/volumes/gDLpyWtFacYC",
+                "volumeInfo": {
+                    "title": "Programming Game AI by Example",
+                    "authors": [
+                        "Mat Buckland"
+                    ],
+                    "publisher": "Jones & Bartlett Learning",
+                    "publishedDate": "2005",
+                    "description": "This book describes in detail many of the AI techniques used in modern computer games, explicity shows how to implement these practical techniques within the framework of several game developers with a practical foundation to game AI.",
+                    "industryIdentifiers": [
+                        {
+                            "type": "ISBN_10",
+                            "identifier": "1556220782"
+                        },
+                        {
+                            "type": "ISBN_13",
+                            "identifier": "9781556220784"
+                        }
+                    ],
+                    "readingModes": {
+                        "text": false,
+                        "image": true
+                    },
+                    "pageCount": 522,
+                    "printType": "BOOK",
+                    "categories": [
+                        "Computers"
+                    ],
+                    "averageRating": 4,
+                    "ratingsCount": 2,
+                    "maturityRating": "NOT_MATURE",
+                    "allowAnonLogging": false,
+                    "contentVersion": "0.4.5.0.preview.1",
+                    "panelizationSummary": {
+                        "containsEpubBubbles": false,
+                        "containsImageBubbles": false
+                    },
+                    "imageLinks": {
+                        "smallThumbnail": "http://books.google.com/books/content?id=gDLpyWtFacYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                        "thumbnail": "http://books.google.com/books/content?id=gDLpyWtFacYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    },
+                    "language": "en",
+                    "previewLink": "http://books.google.com.br/books?id=gDLpyWtFacYC&pg=PR4&dq=programmin+game&hl=&cd=1&source=gbs_api",
+                    "infoLink": "http://books.google.com.br/books?id=gDLpyWtFacYC&dq=programmin+game&hl=&source=gbs_api",
+                    "canonicalVolumeLink": "https://books.google.com/books/about/Programming_Game_AI_by_Example.html?hl=&id=gDLpyWtFacYC"
+                },
+                "saleInfo": {
+                    "country": "BR",
+                    "saleability": "NOT_FOR_SALE",
+                    "isEbook": false
+                },
+                "accessInfo": {
+                    "country": "BR",
+                    "viewability": "PARTIAL",
+                    "embeddable": true,
+                    "publicDomain": false,
+                    "textToSpeechPermission": "ALLOWED",
+                    "epub": {
+                        "isAvailable": false
+                    },
+                    "pdf": {
+                        "isAvailable": true,
+                        "acsTokenLink": "http://books.google.com.br/books/download/Programming_Game_AI_by_Example-sample-pdf.acsm?id=gDLpyWtFacYC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                    },
+                    "webReaderLink": "http://play.google.com/books/reader?id=gDLpyWtFacYC&hl=&source=gbs_api",
+                    "accessViewStatus": "SAMPLE",
+                    "quoteSharingAllowed": false
+                },
+                "searchInfo": {
+                    "textSnippet": "Mat Buckland. \u201c <b>Programming Game</b> AI by Example stands out from the pack by providing indus- trial - strength solutions to difficult problems , like steering and goal - oriented behavior . Mat guides the reader toward building a&nbsp;..."
+                }
+            },
+            {
+                "kind": "books#volume",
+                "id": "frkrDwAAQBAJ",
+                "etag": "+StiOq7xjWI",
+                "selfLink": "https://www.googleapis.com/books/v1/volumes/frkrDwAAQBAJ",
+                "volumeInfo": {
+                    "title": "Game Physics Cookbook",
+                    "subtitle": "Discover over 100 easy-to-follow recipes to help you implement efficient game physics and collision detection in your games",
+                    "authors": [
+                        "Gabor Szauer"
+                    ],
+                    "publisher": "Packt Publishing Ltd",
+                    "publishedDate": "2017-03-24",
+                    "description": "Collision Detection and Rigid body physics for Game Development Key Features Get a comprehensive coverage of techniques to create high performance collision detection in games Learn the core mathematics concepts and physics involved in depicting collision detection for your games Get a hands-on experience of building a rigid body physics engine Book DescriptionPhysics is really important for game programmers who want to add realism and functionality to their games. Collision detection in particular is a problem that affects all game developers, regardless of the platform, engine, or toolkit they use. This book will teach you the concepts and formulas behind collision detection. You will also be taught how to build a simple physics engine, where Rigid Body physics is the main focus, and learn about intersection algorithms for primitive shapes. You\u2019ll begin by building a strong foundation in mathematics that will be used throughout the book. We\u2019ll guide you through implementing 2D and 3D primitives and show you how to perform effective collision tests for them. We then pivot to one of the harder areas of game development\u2014collision detection and resolution. Further on, you will learn what a Physics engine is, how to set up a game window, and how to implement rendering. We\u2019ll explore advanced physics topics such as constraint solving. You\u2019ll also find out how to implement a rudimentary physics engine, which you can use to build an Angry Birds type of game or a more advanced game. By the end of the book, you will have implemented all primitive and some advanced collision tests, and you will be able to read on geometry and linear Algebra formulas to take forward to your own games!What you will learn Implement fundamental maths so you can develop solid game physics Use matrices to encode linear transformations Know how to check geometric primitives for collisions Build a Physics engine that can create realistic rigid body behavior Understand advanced techniques, including the Separating Axis Theorem Create physically accurate collision reactions Explore spatial partitioning as an acceleration structure for collisions Resolve rigid body collisions between primitive shapes Who this book is for This book is for beginner to intermediate game developers. You don\u2019t need to have a formal education in games\u2014you can be a hobbyist or indie developer who started making games with Unity 3D.",
+                    "industryIdentifiers": [
+                        {
+                            "type": "ISBN_13",
+                            "identifier": "9781787120815"
+                        },
+                        {
+                            "type": "ISBN_10",
+                            "identifier": "1787120813"
+                        }
+                    ],
+                    "readingModes": {
+                        "text": true,
+                        "image": true
+                    },
+                    "pageCount": 481,
+                    "printType": "BOOK",
+                    "categories": [
+                        "Computers"
+                    ],
+                    "maturityRating": "NOT_MATURE",
+                    "allowAnonLogging": true,
+                    "contentVersion": "1.5.6.0.preview.3",
+                    "panelizationSummary": {
+                        "containsEpubBubbles": false,
+                        "containsImageBubbles": false
+                    },
+                    "imageLinks": {
+                        "smallThumbnail": "http://books.google.com/books/content?id=frkrDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                        "thumbnail": "http://books.google.com/books/content?id=frkrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    },
+                    "language": "en",
+                    "previewLink": "http://books.google.com.br/books?id=frkrDwAAQBAJ&printsec=frontcover&dq=game+physics&hl=&cd=8&source=gbs_api",
+                    "infoLink": "https://play.google.com/store/books/details?id=frkrDwAAQBAJ&source=gbs_api",
+                    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=frkrDwAAQBAJ"
+                },
+                "saleInfo": {
+                    "country": "BR",
+                    "saleability": "FOR_SALE",
+                    "isEbook": true,
+                    "listPrice": {
+                        "amount": 245.99,
+                        "currencyCode": "BRL"
+                    },
+                    "retailPrice": {
+                        "amount": 245.99,
+                        "currencyCode": "BRL"
+                    },
+                    "buyLink": "https://play.google.com/store/books/details?id=frkrDwAAQBAJ&rdid=book-frkrDwAAQBAJ&rdot=1&source=gbs_api",
+                    "offers": [
+                        {
+                            "finskyOfferType": 1,
+                            "listPrice": {
+                                "amountInMicros": 245990000,
+                                "currencyCode": "BRL"
+                            },
+                            "retailPrice": {
+                                "amountInMicros": 245990000,
+                                "currencyCode": "BRL"
+                            },
+                            "giftable": true
+                        }
+                    ]
+                },
+                "accessInfo": {
+                    "country": "BR",
+                    "viewability": "PARTIAL",
+                    "embeddable": true,
+                    "publicDomain": false,
+                    "textToSpeechPermission": "ALLOWED",
+                    "epub": {
+                        "isAvailable": true
+                    },
+                    "pdf": {
+                        "isAvailable": true
+                    },
+                    "webReaderLink": "http://play.google.com/books/reader?id=frkrDwAAQBAJ&hl=&source=gbs_api",
+                    "accessViewStatus": "SAMPLE",
+                    "quoteSharingAllowed": false
+                },
+                "searchInfo": {
+                    "textSnippet": "Collision detection in particular is a problem that affects all game developers, regardless of the platform, engine, or toolkit they use. This book will teach you the concepts and formulas behind collision detection."
+                }
+            }
+        ],
+        "rayssa": [
+            {
+                "kind": "books#volume",
+                "id": "RxG6DAAAQBAJ",
+                "etag": "UsUrKFhQj7I",
+                "selfLink": "https://www.googleapis.com/books/v1/volumes/RxG6DAAAQBAJ",
+                "volumeInfo": {
+                    "title": "O Pequeno Pr\u00edncipe",
+                    "authors": [
+                        "Antoine Saint-Exup\u00e9ry"
+                    ],
+                    "publisher": "Pia Sociedade de S\u00e3o Paulo - Editora Paulus",
+                    "publishedDate": "2016-07-01",
+                    "description": "Um piloto cai com seu avi\u00e3o no deserto e ali encontra um fr\u00e1gil menino. Ele diz que veio de um pequeno planeta distante. Passando um tempo juntos, os dois repensam os seus valores e encontram o sentido da vida. Cl\u00e1ssico da literatura, essa hist\u00f3ria m\u00e1gica e comovente de Antoine de Saint-Exup\u00e9ry \u00e9 o livro mais traduzido da hist\u00f3ria. Essa nova tradu\u00e7\u00e3o lan\u00e7ada pela Paulus \u00e9 assinada pelo padre Luiz Miguel Duarte, superior da Pia Sociedade de S\u00e3o Paulo no Brasil.",
+                    "industryIdentifiers": [
+                        {
+                            "type": "ISBN_13",
+                            "identifier": "9788534944168"
+                        },
+                        {
+                            "type": "ISBN_10",
+                            "identifier": "8534944164"
+                        }
+                    ],
+                    "readingModes": {
+                        "text": true,
+                        "image": true
+                    },
+                    "pageCount": 154,
+                    "printType": "BOOK",
+                    "categories": [
+                        "Juvenile Fiction"
+                    ],
+                    "averageRating": 5,
+                    "ratingsCount": 2,
+                    "maturityRating": "NOT_MATURE",
+                    "allowAnonLogging": true,
+                    "contentVersion": "2.13.11.0.preview.3",
+                    "panelizationSummary": {
+                        "containsEpubBubbles": false,
+                        "containsImageBubbles": false
+                    },
+                    "imageLinks": {
+                        "smallThumbnail": "http://books.google.com/books/content?id=RxG6DAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                        "thumbnail": "http://books.google.com/books/content?id=RxG6DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    },
+                    "language": "pt-BR",
+                    "previewLink": "http://books.google.com.br/books?id=RxG6DAAAQBAJ&printsec=frontcover&dq=o+pequeno+principe&hl=&cd=2&source=gbs_api",
+                    "infoLink": "https://play.google.com/store/books/details?id=RxG6DAAAQBAJ&source=gbs_api",
+                    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=RxG6DAAAQBAJ"
+                },
+                "saleInfo": {
+                    "country": "BR",
+                    "saleability": "FOR_SALE",
+                    "isEbook": true,
+                    "listPrice": {
+                        "amount": 23.1,
+                        "currencyCode": "BRL"
+                    },
+                    "retailPrice": {
+                        "amount": 23.1,
+                        "currencyCode": "BRL"
+                    },
+                    "buyLink": "https://play.google.com/store/books/details?id=RxG6DAAAQBAJ&rdid=book-RxG6DAAAQBAJ&rdot=1&source=gbs_api",
+                    "offers": [
+                        {
+                            "finskyOfferType": 1,
+                            "listPrice": {
+                                "amountInMicros": 23100000,
+                                "currencyCode": "BRL"
+                            },
+                            "retailPrice": {
+                                "amountInMicros": 23100000,
+                                "currencyCode": "BRL"
+                            },
+                            "giftable": true
+                        }
+                    ]
+                },
+                "accessInfo": {
+                    "country": "BR",
+                    "viewability": "PARTIAL",
+                    "embeddable": true,
+                    "publicDomain": false,
+                    "textToSpeechPermission": "ALLOWED",
+                    "epub": {
+                        "isAvailable": true,
+                        "acsTokenLink": "http://books.google.com.br/books/download/O_Pequeno_Pr%C3%ADncipe-sample-epub.acsm?id=RxG6DAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                    },
+                    "pdf": {
+                        "isAvailable": true,
+                        "acsTokenLink": "http://books.google.com.br/books/download/O_Pequeno_Pr%C3%ADncipe-sample-pdf.acsm?id=RxG6DAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                    },
+                    "webReaderLink": "http://play.google.com/books/reader?id=RxG6DAAAQBAJ&hl=&source=gbs_api",
+                    "accessViewStatus": "SAMPLE",
+                    "quoteSharingAllowed": false
+                },
+                "searchInfo": {
+                    "textSnippet": "Passando um tempo juntos, os dois repensam os seus valores e encontram o sentido da vida. Cl\u00e1ssico da literatura, essa hist\u00f3ria m\u00e1gica e comovente de Antoine de Saint-Exup\u00e9ry \u00e9 o livro mais traduzido da hist\u00f3ria."
+                }
+            },
+            {
+                "kind": "books#volume",
+                "id": "JvQ6AQAAIAAJ",
+                "etag": "rEpQpiQ3snQ",
+                "selfLink": "https://www.googleapis.com/books/v1/volumes/JvQ6AQAAIAAJ",
+                "volumeInfo": {
+                    "title": "Estudos de Programa\u00e7\u00e3o E An\u00e1lise Num\u00e9rica",
+                    "publishedDate": "1966",
+                    "industryIdentifiers": [
+                        {
+                            "type": "OTHER",
+                            "identifier": "UCAL:$B534952"
+                        }
+                    ],
+                    "readingModes": {
+                        "text": false,
+                        "image": false
+                    },
+                    "pageCount": 768,
+                    "printType": "BOOK",
+                    "categories": [
+                        "Computer programming"
+                    ],
+                    "maturityRating": "NOT_MATURE",
+                    "allowAnonLogging": false,
+                    "contentVersion": "0.5.2.0.preview.0",
+                    "panelizationSummary": {
+                        "containsEpubBubbles": false,
+                        "containsImageBubbles": false
+                    },
+                    "imageLinks": {
+                        "smallThumbnail": "http://books.google.com/books/content?id=JvQ6AQAAIAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+                        "thumbnail": "http://books.google.com/books/content?id=JvQ6AQAAIAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                    },
+                    "language": "en",
+                    "previewLink": "http://books.google.com.br/books?id=JvQ6AQAAIAAJ&q=programa%C3%A7%C3%A3o&dq=programa%C3%A7%C3%A3o&hl=&cd=4&source=gbs_api",
+                    "infoLink": "http://books.google.com.br/books?id=JvQ6AQAAIAAJ&dq=programa%C3%A7%C3%A3o&hl=&source=gbs_api",
+                    "canonicalVolumeLink": "https://books.google.com/books/about/Estudos_de_Programa%C3%A7%C3%A3o_E_An%C3%A1lise_Num.html?hl=&id=JvQ6AQAAIAAJ"
+                },
+                "saleInfo": {
+                    "country": "BR",
+                    "saleability": "NOT_FOR_SALE",
+                    "isEbook": false
+                },
+                "accessInfo": {
+                    "country": "BR",
+                    "viewability": "NO_PAGES",
+                    "embeddable": false,
+                    "publicDomain": false,
+                    "textToSpeechPermission": "ALLOWED",
+                    "epub": {
+                        "isAvailable": false
+                    },
+                    "pdf": {
+                        "isAvailable": false
+                    },
+                    "webReaderLink": "http://play.google.com/books/reader?id=JvQ6AQAAIAAJ&hl=&source=gbs_api",
+                    "accessViewStatus": "NONE",
+                    "quoteSharingAllowed": false
+                },
+                "searchInfo": {
+                    "textSnippet": "Bal FUNDA\u00c7\u00c3O CALOUSTE GULBENKIAN NSTITUTO GULBENKIAN DE CI\u00caNCIA Centro de C\u00e1lculo Cient\u00edfico TUDOS DE <b>PROGRAMA\u00c7\u00c3O</b> E AN\u00c1LISE NUMERICA AERIAL TRIANGULATION FORMATION - COMPENSATION STRIP - BLOCK by R. AGONIA PEREIRA Scientific Computing&nbsp;..."
+                }
+            },
+            {
+                "kind": "books#volume",
+                "id": "Gaq5EAAAQBAJ",
+                "etag": "AQqCrnXbS8A",
+                "selfLink": "https://www.googleapis.com/books/v1/volumes/Gaq5EAAAQBAJ",
+                "volumeInfo": {
+                    "title": "\u00c9 assim que acaba (Edi\u00e7\u00e3o de colecionador)",
+                    "authors": [
+                        "Colleen Hoover"
+                    ],
+                    "publisher": "Galera",
+                    "publishedDate": "2023-05-01",
+                    "description": "A obra-prima de Colleen Hoover, fen\u00f4meno editorial com mais de 2 milh\u00f5es de exemplares vendidos no Brasil. Nesta edi\u00e7\u00e3o especial de colecionador, confira entrevista in\u00e9dita com a autora e sua m\u00e3e, cuja hist\u00f3ria inspirou o livro, e fotos do acervo da fam\u00edlia. Lily nem sempre teve uma vida f\u00e1cil, mas isso nunca a impediu de trabalhar arduamente para conquistar a vida t\u00e3o sonhada. Ela percorreu um longo caminho desde a inf\u00e2ncia, em uma cidadezinha no Maine: se formou em marketing, se mudou para Boston e abriu a pr\u00f3pria loja. Ent\u00e3o, quando se sente atra\u00edda por um lindo neurocirurgi\u00e3o chamado Ryle Kincaid, tudo parece perfeito demais para ser verdade. Ryle \u00e9 confiante, obstinado, quem sabe at\u00e9 um pouco arrogante. Mas tamb\u00e9m \u00e9 sens\u00edvel, brilhante e se sente atra\u00eddo por Lily. Por\u00e9m, sua grande avers\u00e3o a relacionamentos \u00e9 perturbadora. Mas quando Atlas, seu primeiro amor, reaparece de repente, Lily n\u00e3o consegue tir\u00e1-lo da cabe\u00e7a , assim como a liga\u00e7\u00e3o com o passado que deixou para tr\u00e1s. E sobrecarregada com as quest\u00f5es sobre seu novo relacionamento, tudo que Lily construiu com Ryle fica em risco. Com um livro ousado e extremamente pessoal, Colleen Hoover conta uma hist\u00f3ria arrasadora, mas tamb\u00e9m inovadora. Uma narrativa inesquec\u00edvel sobre um amor que custa caro demais. \" \u00c9 assim que acaba trata de um assunto dif\u00edcil com cuidado e um tremendo apanhado emocional. Os relacionamentos s\u00e3o retratados com honestidade e compaix\u00e3o, e a nota da autora, que oferece um vislumbre da conex\u00e3o pessoal de Hoover com a pr\u00f3pria obra, \u00e9 imperd\u00edvel. Repleto de drama familiar e verdades dolorosas, este livro retrata de forma poderosa a devasta\u00e7\u00e3o de rela\u00e7\u00f5es abusivas e a for\u00e7a de seus sobreviventes.\" \u2013 Kirkus, Starred Review",
+                    "industryIdentifiers": [
+                        {
+                            "type": "ISBN_13",
+                            "identifier": "9786559813032"
+                        },
+                        {
+                            "type": "ISBN_10",
+                            "identifier": "6559813037"
+                        }
+                    ],
+                    "readingModes": {
+                        "text": true,
+                        "image": true
+                    },
+                    "pageCount": 410,
+                    "printType": "BOOK",
+                    "categories": [
+                        "Fiction"
+                    ],
+                    "maturityRating": "NOT_MATURE",
+                    "allowAnonLogging": true,
+                    "contentVersion": "1.4.4.0.preview.3",
+                    "panelizationSummary": {
+                        "containsEpubBubbles": false,
+                        "containsImageBubbles": false
+                    },
+                    "imageLinks": {
+                        "smallThumbnail": "http://books.google.com/books/content?id=Gaq5EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                        "thumbnail": "http://books.google.com/books/content?id=Gaq5EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                    },
+                    "language": "pt-BR",
+                    "previewLink": "http://books.google.com.br/books?id=Gaq5EAAAQBAJ&printsec=frontcover&dq=%C3%A9+assim+que+acaba&hl=&cd=1&source=gbs_api",
+                    "infoLink": "https://play.google.com/store/books/details?id=Gaq5EAAAQBAJ&source=gbs_api",
+                    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=Gaq5EAAAQBAJ"
+                },
+                "saleInfo": {
+                    "country": "BR",
+                    "saleability": "FOR_SALE",
+                    "isEbook": true,
+                    "listPrice": {
+                        "amount": 20.21,
+                        "currencyCode": "BRL"
+                    },
+                    "retailPrice": {
+                        "amount": 20.21,
+                        "currencyCode": "BRL"
+                    },
+                    "buyLink": "https://play.google.com/store/books/details?id=Gaq5EAAAQBAJ&rdid=book-Gaq5EAAAQBAJ&rdot=1&source=gbs_api",
+                    "offers": [
+                        {
+                            "finskyOfferType": 1,
+                            "listPrice": {
+                                "amountInMicros": 20210000,
+                                "currencyCode": "BRL"
+                            },
+                            "retailPrice": {
+                                "amountInMicros": 20210000,
+                                "currencyCode": "BRL"
+                            },
+                            "giftable": true
+                        }
+                    ]
+                },
+                "accessInfo": {
+                    "country": "BR",
+                    "viewability": "PARTIAL",
+                    "embeddable": true,
+                    "publicDomain": false,
+                    "textToSpeechPermission": "ALLOWED",
+                    "epub": {
+                        "isAvailable": true,
+                        "acsTokenLink": "http://books.google.com.br/books/download/%C3%89_assim_que_acaba_Edi%C3%A7%C3%A3o_de_coleciona-sample-epub.acsm?id=Gaq5EAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                    },
+                    "pdf": {
+                        "isAvailable": true,
+                        "acsTokenLink": "http://books.google.com.br/books/download/%C3%89_assim_que_acaba_Edi%C3%A7%C3%A3o_de_coleciona-sample-pdf.acsm?id=Gaq5EAAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                    },
+                    "webReaderLink": "http://play.google.com/books/reader?id=Gaq5EAAAQBAJ&hl=&source=gbs_api",
+                    "accessViewStatus": "SAMPLE",
+                    "quoteSharingAllowed": false
+                },
+                "searchInfo": {
+                    "textSnippet": "A obra-prima de Colleen Hoover, fen\u00f4meno editorial com mais de 2 milh\u00f5es de exemplares vendidos no Brasil."
+                }
+            }
+        ]
+    },
+    "notas": {
+        "bassetin": {
+            "Programming Game AI by Example": 5
+        }
+    }
+}
