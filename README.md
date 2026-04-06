@@ -1,53 +1,93 @@
-# 📘 Libris – Sistema Inteligente de Recomendação de Livros
+# 📘 Libris – Sistema de Recomendação de Livros com IA
 
-O **Libris** é uma aplicação desenvolvida por estudantes de Ciência da Computação com o objetivo de recomendar livros de forma personalizada, utilizando **Big Data**, **Machine Learning** e **Processamento de Linguagem Natural (NLP)**.  
-O projeto busca incentivar o hábito da leitura por meio de sugestões inteligentes e adaptadas ao perfil de cada usuário.
+🚀 Aplicação desenvolvida em Python que utiliza integração com APIs, processamento de dados e técnicas de recomendação para sugerir livros personalizados com base nas preferências do usuário.
+
+---
+
+## 👨‍💻 Sobre o Projeto
+
+Projeto desenvolvido com foco na construção de um sistema inteligente de recomendação, utilizando dados reais de APIs públicas e técnicas de análise de dados.
+
+Responsável pela integração com APIs, processamento de dados e desenvolvimento da lógica de recomendação.
 
 ---
 
 ## 🎯 Objetivo
 
-Criar uma IA capaz de recomendar livros com base nos gostos, histórico de leitura e preferências do usuário, integrando dados públicos de APIs literárias e técnicas modernas de recomendação.
+Criar um sistema capaz de recomendar livros de forma personalizada com base em:
+- Preferências do usuário  
+- Histórico de busca  
+- Similaridade entre livros  
 
 ---
 
 ## 🧠 Problema e Solução
 
 ### ❌ Problema
-Leitores frequentemente enfrentam dificuldade para escolher o próximo livro, seja por excesso de opções ou falta de direcionamento personalizado.
+Dificuldade em encontrar livros relevantes diante de muitas opções disponíveis.
 
 ### ✅ Solução
-O Libris oferece recomendações inteligentes e personalizadas, analisando dados reais de livros e comportamento do usuário para sugerir obras relevantes e alinhadas ao seu perfil.
+Sistema de recomendação que analisa dados de livros e gera sugestões personalizadas de forma automatizada.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## ⚙️ Funcionalidades
 
-- **Linguagem:** Python 3.10+
-- **Machine Learning:** `scikit-learn`, `LightFM`, `Surprise`
-- **NLP:** `spaCy`, `nltk`, `transformers`
-- **Interface:** `Streamlit` (protótipo rápido)
-- **APIs:** [Google Books API](https://developers.google.com/books), [Open Library API](https://openlibrary.org/developers)
-- **Banco de Dados:** `MongoDB` (opcional)
-- **Outras:** `pandas`, `numpy`, `requests`
+- 🔎 Busca de livros por nome
+- 🌐 Integração com APIs externas (Google Books e Open Library)
+- 🧠 Sistema de recomendação baseado em similaridade
+- 📊 Manipulação e análise de dados
+- 💾 Armazenamento de informações
+- 🖥️ Interface interativa com Streamlit
 
 ---
 
-## 📁 Estrutura de Diretórios
+## 🧠 Conceitos Aplicados
+
+- Integração com APIs REST
+- Manipulação de dados (pandas, numpy)
+- Sistemas de recomendação
+- Processamento de Linguagem Natural (NLP)
+- Estruturas de dados
+- Arquitetura modular
+
+---
+
+## 🧩 Desafios
+
+- Trabalhar com dados inconsistentes de APIs externas
+- Criar lógica de recomendação eficiente
+- Processar e analisar grandes volumes de dados
+- Integrar múltiplas bibliotecas de Machine Learning
+
+---
+
+## 🛠️ Tecnologias
+
+- **Python 3**
+- **Pandas / NumPy**
+- **Scikit-learn**
+- **Streamlit**
+- **Requests**
+- **NLTK / spaCy**
+- **APIs REST (Google Books / Open Library)**
+
+---
+
+## 📁 Estrutura do Projeto
 
 ```bash
 libris/
-├── README.md
-├── requirements.txt
-├── data/                 # Dados coletados
-├── notebooks/            # Análises exploratórias
+├── data/
+├── notebooks/
 ├── src/
-│   ├── api/              # Scripts para acessar APIs de livros
-│   ├── model/            # Algoritmos de recomendação
-│   ├── nlp/              # Análise de sinopses e resenhas
-│   └── interface/        # Interface com o usuário
-└── docs/                 # Documentação do projeto
+│   ├── api/
+│   ├── model/
+│   ├── nlp/
+│   └── interface/
+└── docs/
 ```
+
 ## 📦 requirements.txt
 
 ```txt
@@ -92,7 +132,7 @@ streamlit run src/interface/app.py
 ```
 ---
 
-📊 Fluxo de Funcionamento
+## 📊 Fluxo de Funcionamento
 
 - Coleta de Dados – Scripts em src/api/ acessam APIs como Google Books e Open Library.
 
@@ -106,19 +146,22 @@ streamlit run src/interface/app.py
 
 ---
 
-🤝 Como Contribuir
+## 💡 Diferencial
 
-- Faça um fork do projeto
+Este projeto demonstra na prática:
 
-- Crie uma branch para sua feature (git checkout -b minha-feature)
-
-- Commit suas alterações (git commit -m 'Adiciona nova feature')
-
-- Envie para o repositório remoto (git push origin minha-feature)
-
-- Abra um Pull Request
+- Construção de aplicações com integração de APIs
+- Desenvolvimento de sistemas de recomendação
+- Manipulação e análise de dados
+- Aplicação de conceitos de IA em um sistema real
 
 ---
-📜 Licença
 
-Este projeto é de uso acadêmico e está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+## 👨‍💻 Autor
+
+**Lucas Rodrigo Basseto de Sousa**
+
+- GitHub: https://github.com/Bassetin  
+- LinkedIn: https://linkedin.com/in/lucasrodrigodev  
+
+---
