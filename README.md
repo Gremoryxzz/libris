@@ -157,11 +157,12 @@ Este projeto demonstra na prática:
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
-**Lucas Rodrigo Basseto de Sousa**
-
-- GitHub: https://github.com/Bassetin  
+**Wallace lopes da silva e lucas basseto**
+  
 - LinkedIn: https://linkedin.com/in/lucasrodrigodev  
-
+- LinkedIn: https://www.linkedin.com/in/wallace-lopes-3926aa343/
+- GitHub: https://github.com/Bassetin
+- GitHub: https://github.com/Gremoryxzz
 ---
